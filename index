@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodieDeals | Latest Coupons</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold tracking-tight text-amber-500">
+        Foodie<span class="text-white">Deals</span>
+      </h1>
+      <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full font-medium">
+        Live Verification Active
+      </span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-10 text-center px-4 max-w-3xl mx-auto">
+    <h2 class="text-4xl sm:text-5xl font-black mb-4">Save Big on Your Favorite Food</h2>
+    <p class="text-slate-400 text-lg">Verified discount codes for KFC, McDonald's, Swiggy, and Burger King.</p>
+  </section>
+
+  <!-- Coupon Grid -->
+  <main class="max-w-6xl mx-auto px-4 pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- KFC Card -->
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-red-500/50 transition">
+      <img src="https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=600&auto=format&fit=crop&q=80" alt="KFC Fried Chicken" class="h-44 w-full object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold text-red-500 uppercase tracking-wider">KFC</span>
+        <h3 class="text-lg font-bold mt-1">₹100 OFF on Orders Above ₹499</h3>
+        <p class="text-sm text-slate-400 mt-1 mb-4">Valid on bucket meals & combos.</p>
+        <button onclick="copyCode('KFC100', this)" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition">
+          <i class="fa-regular font-normal fa-copy"></i> Copy <span class="bg-black/20 px-2 py-0.5 rounded text-xs">KFC100</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- McDonald's Card -->
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-amber-500/50 transition">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=80" alt="McDonalds Burger" class="h-44 w-full object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">McDonald's</span>
+        <h3 class="text-lg font-bold mt-1">Free McChicken on ₹299+</h3>
+        <p class="text-sm text-slate-400 mt-1 mb-4">Applicable on app order checkouts.</p>
+        <button onclick="copyCode('MCDFREE', this)" class="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl flex items-center justify-center gap-2 transition">
+          <i class="fa-regular font-normal fa-copy"></i> Copy <span class="bg-black/10 px-2 py-0.5 rounded text-xs">MCDFREE</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Swiggy Card -->
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-orange-500/50 transition">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80" alt="Food Delivery" class="h-44 w-full object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold text-orange-500 uppercase tracking-wider">Swiggy</span>
+        <h3 class="text-lg font-bold mt-1">50% OFF Up To ₹100</h3>
+        <p class="text-sm text-slate-400 mt-1 mb-4">First 3 orders using online payment.</p>
+        <button onclick="copyCode('SWIGGY50', this)" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition">
+          <i class="fa-regular font-normal fa-copy"></i> Copy <span class="bg-black/20 px-2 py-0.5 rounded text-xs">SWIGGY50</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Burger King Card -->
+    <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-yellow-600/50 transition">
+      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&auto=format&fit=crop&q=80" alt="Burger King Meal" class="h-44 w-full object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold text-yellow-500 uppercase tracking-wider">Burger King</span>
+        <h3 class="text-lg font-bold mt-1">Buy 1 Get 1 Free Whopper</h3>
+        <p class="text-sm text-slate-400 mt-1 mb-4">Valid every Wednesday via app.</p>
+        <button onclick="copyCode('BKWHOPPER', this)" class="w-full py-2.5 bg-yellow-600 hover:bg-yellow-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition">
+          <i class="fa-regular font-normal fa-copy"></i> Copy <span class="bg-black/20 px-2 py-0.5 rounded text-xs">BKWHOPPER</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function copyCode(code, btn) {
+      navigator.clipboard.writeText(code);
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = `<i class="fa-solid fa-check"></i> Copied!`;
+      btn.classList.add('bg-emerald-600');
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.classList.remove('bg-emerald-600');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
